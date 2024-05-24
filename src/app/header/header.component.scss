@@ -110,6 +110,7 @@
 
           @media only screen and (max-width: 640px) {
             border-top: 0;
+            top: 18px !important;
           }
         }
       }
@@ -157,13 +158,27 @@
       }
   
       svg {
-        color: #fff
+        color: #fff;
+        margin-left: -4px;
       }
     }
 
     @media only screen and (max-width: 640px) {
       display: inline-block;
-      margin-bottom: 20px;
+      margin: 10px 0;
+    }
+  }
+
+  .menu-items {
+
+    .list-group-item {
+      padding: 13px;
+      width: 200px;
+    }
+
+    .icon-link {
+      text-decoration: none;
+      color: #000000
     }
   }
 }

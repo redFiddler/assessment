@@ -1,0 +1,40 @@
+.bi-chevron-left {
+  position: absolute;
+  top: 23px; 
+  right: 0;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.list-group-item  {
+  background: transparent;
+  border-bottom: 0;  
+  padding: 0;
+
+  .icon-link {
+    text-decoration: none;
+    text-underline-offset: unset;
+    backface-visibility: unset;
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    padding: 15px 0;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.active {
+      color: rgb(0,0,0);
+    }
+
+    &:hover {
+      color: rgb(0,0,0);
+    }
+  }
+
+  .bi {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+}

@@ -17,8 +17,7 @@ import { HeaderConponent } from './header/header.component';
 import { DashboardConponent } from './dashboard/dashboard.component';
 import { PageTitleComponent } from './page-title/page-title.component';
 import { WorldMapComponent } from './world-map/world-map.component';
-
-
+import { LeftMenuComponent } from './left-nav/left-nav.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,8 @@ import { WorldMapComponent } from './world-map/world-map.component';
     DashboardConponent,
     HeaderConponent,
     PageTitleComponent,
-    WorldMapComponent
+    WorldMapComponent,
+    LeftMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -7,39 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'code';
-  isCollapsed = true;
+  isCollapsed: boolean = false;
   isMessagesCollapsed = false;
   isToDoCollapsed = false;
   isCalendarCollapsed = false;
   isResellersCollapsed = false;
   isTransactionsCollapsed = false;
-
-  countries = [
-    {
-      name: 'Afghanistan',
-      code: 'AF',
-    },
-  ];
-
-  selectedCountry: any;
-
-  filteredCountries: any = [];
-
-  filterCountry(event: any) {
-    let filtered: any[] = [];
-    let query = event.query;
-
-    for (let i = 0; i < this.countries.length; i++) {
-      let country = this.countries[i];
-      if (country.name.toLowerCase().indexOf(query.toLowerCase()) == 0) {
-        filtered.push(country);
-      }
-    }
-
-    this.filteredCountries = filtered;
-  }
-
-  toggleSideNav() {
-    this.isCollapsed = !this.isCollapsed;
+  
+  isLeftMenuCollapsed(eventData: boolean) {
+    console.log('event data ', eventData);
+    this.isCollapsed = eventData;
   }
 }

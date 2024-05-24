@@ -14,7 +14,9 @@
           <div class="col">
 
             <div class="page-wrapper">
-              <div class="left-menu-panel" style="border: 1px solid orange"></div>
+              <div class="left-menu-panel" [ngClass]="isCollapsed ? 'left-menu-panel-collapsed' : ''">
+                <app-left-manu (isLeftMenuCollapsed)="isLeftMenuCollapsed($event)"></app-left-manu>
+              </div>
 
               <div class="right-content-panel">
                 <app-dashboard></app-dashboard>
