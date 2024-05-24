@@ -1,0 +1,58 @@
+.page-title-wrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 75px;
+
+  .title {
+
+    h2 {
+      font-size: 2.5rem;
+      color: #ffffff;
+    }
+
+    p {
+      color:#fff;
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .page-search-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    input {
+      width: 500px;
+      height: 55px;
+      background: #4d616a;
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      border: 0;
+      padding-left: 10px;
+      font-weight: bold;
+
+      &:focus {
+        outline: 0;
+        border: 0;
+      }
+
+      &::-ms-input-placeholder { /* Edge 12-18 */
+        color: rgba(255, 255, 255, 0.5);
+      }
+      
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      @media only screen and (max-width: 992px) {
+        width: 300px
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}

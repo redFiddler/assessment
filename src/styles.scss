@@ -1,1 +1,232 @@
 /* You can add global styles to this file, and also import other style files */
+
+// @font-face {
+// 	font-family: 'GothamBook';
+// 	src: url('./assets/fonts/GothamBook.eot');
+// 	src: local('GothamBook'), url('./assets/fonts/GothamBook.woff') format('woff'), url('./assets/fonts/GothamBook.ttf') format('truetype');
+// }
+
+// body, html { font-family: 'GothamBook'; font-size: 14px; font-weight: 600; }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, html { font-family: "Montserrat", sans-serif; font-size: 14px; font-weight: 600; }
+.clear {clear: both}
+
+// wrapper
+.wrapper {
+  display: flex;
+  position: relative;
+
+  &::before {
+    background: #203a45;
+    content: "";
+    height: 350px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media only screen and (max-width: 992px) {
+      height: 260px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      height: 245px;
+    }
+
+    @media only screen and (max-width: 640px) {
+      height: 300px;
+    }
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 0;
+    transition: margin-left .3s ease-in-out, left .3s ease-in-out, margin-right .3s ease-in-out, right .3s ease-in-out;
+    width: 100%;
+    background-color: #efefef;   
+
+    .content-wrapper {
+      flex: 1;
+      padding: 0 1.5rem;
+
+      .sidenav-collapsed {
+        width: 300px !important;
+      }
+
+      .right-panel {
+        position: relative;          
+        padding-left: 10px;
+      
+        @media only screen and (max-width: 992px) {
+          padding: 0
+        }
+      }
+      
+      .left-panel-half-width {
+        width: calc(100% - 300px);
+        transition: all .5s ease;
+      }
+
+      .left-panel-full-width {
+        width: calc(100% - 48px);
+        transition: all .5s ease; 
+        
+        @media only screen and (max-width: 992px) {
+          width: 100%; 
+        }
+      }
+
+      @media only screen and (max-width: 640px) {
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+.page-wrapper {
+  position: relative;
+  display: flex;
+
+  .left-menu-panel {
+    width: 350px;
+    transition: all .5s ease;
+    padding: 60px 10px 0 0;
+
+    @media only screen and (max-width: 992px) {
+      display: none;          
+    }
+  }
+
+  .right-content-panel {
+    flex-grow: 1;
+    padding-left: 1rem;
+
+    @media only screen and (max-width: 992px) {
+      padding: 0
+    }
+  }
+}
+
+// .left-nav {
+//   position: relative;
+//   padding-top: 90px;
+//   width: 48px;
+//   transition: all .5s ease;
+//   padding-right: 10px;
+//   overflow: hidden;
+
+//   .side-nav-action-button {
+//     position: absolute;
+//     top: 11px; 
+//     right: 16px;
+//     cursor: pointer;
+
+//     .bi {
+//       color: #ffffff;
+//     }
+//   }
+
+//   .list-group-item  {
+//     background: transparent;
+//     border-bottom: 0;
+
+//     .icon-link {
+//       text-decoration: none;
+//       text-underline-offset: unset;
+//       backface-visibility: unset;
+//       color: rgba(0,0,0,0.8);
+//     }
+
+//    .bi {
+//       margin-right: 8px;
+//       font-size: 20px;
+//     }
+//   }
+
+  
+// }
+
+.dash-calendar {
+
+  .p-calendar {
+    min-width: 100%
+  }
+
+  .p-datepicker {    
+    padding: 0;
+    border: 0;
+
+    .p-datepicker-title {
+      button {
+        font-family: "Montserrat", sans-serif; font-size: 1rem; font-weight: 600;    
+        
+        @media only screen and (max-width: 1300px) {
+          font-size: 0.7rem;
+        }
+
+        @media only screen and (max-width: 1280px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    table {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+
+      th {
+        text-align: center;
+      }
+
+      td {
+        & > span {
+          width: 2rem;
+          height: 2rem;
+
+          @media only screen and (max-width: 1300px) {
+            width: 1rem;
+            height: 1rem;
+          }
+
+          @media only screen and (max-width: 1200px) {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+
+        &.p-datepicker-today {
+          & > span {
+            background: #f2b51d;
+            color: #ffffff;
+          }
+        }
+
+        @media only screen and (max-width: 1300px) {
+          padding: 0.2rem
+        }
+      }
+
+      @media only screen and (max-width: 1300px) {
+        font-size: 0.7rem;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 1rem;
+      }
+    }
+
+    
+  }
+
+  @media only screen and (max-width: 1300px) {
+    padding: 0 10px 20px !important;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0 20px 20px !important;
+  }
+}

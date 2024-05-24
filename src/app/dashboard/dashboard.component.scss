@@ -1,0 +1,234 @@
+// cards
+.custom-card {
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(126,142,177,.12);
+  border: 0;
+  margin-bottom: 1.5rem;  
+
+  .card-header {
+    padding: 0 20px;
+    border: 0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    .card-title {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 0;
+      flex-grow: 1;
+      line-height: inherit;
+    }
+
+    .card-action {
+      span {
+        display: inline-block;
+        cursor: pointer;
+        margin: 0 3px;
+        line-height: inherit;
+      }
+    }
+  }
+
+  .card-body {
+    background: #ffffff;
+    padding: 0 20px 20px;
+  }
+
+  .messages {
+
+    .messages-wrapper {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+    }
+
+    .author-pic {
+      width: 80px;
+      height:80px;
+      border-radius: 100%;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+
+      @media only screen and (max-width: 1300px) {
+        width: 60px;
+        height: 60px;
+      }
+
+      @media only screen and (max-width: 992px) {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .author-content {
+      width: calc(100% - 80px);
+      padding-left: 10px;
+
+      .author-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        h4 {
+          font-size: 1rem;
+          font-weight: bold;
+          margin: 0;
+          flex-grow: 1;
+        }
+  
+        span {
+          font-size: 0.8rem;
+          font-weight: bold;
+        }
+
+        @media only screen and (max-width: 1300px) {
+          margin-bottom: 5px;
+
+          h4 {
+            font-size: 0.8rem
+          }
+
+          span {
+            font-size: 0.6rem
+          }
+        }
+
+        @media only screen and (max-width: 992px) {
+          h4 {
+            font-size: 1rem;            
+          }
+
+          span {
+            font-size: 0.8rem;
+          }
+        }
+      }     
+
+      p {
+        color: rgba(0,0,0,0.7);
+        font-size: 0.8rem;       
+      }
+
+      @media only screen and (max-width: 1300px) {
+        width: calc(100% - 60px);
+
+        p {
+          font-size: 0.7rem
+        }
+      }
+
+      @media only screen and (max-width: 992px) {
+        width: calc(100% - 70px);
+
+        p {
+          font-size: 0.8rem; 
+        }
+      }
+    }
+  }
+
+  .reseller {
+    .table {
+      thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+      }
+
+      td, th {
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+      }
+      tr:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+
+      .text-right{
+         text-align: right;
+      }
+    }
+  }
+
+  .todo-checkbox-list {
+    ul {
+      margin-bottom: 20px;
+      padding: 0
+    }
+
+    .list-group-item {
+      margin-bottom: 25px;
+      position: relative;
+
+      .badge {
+        background-color: #f2b51d;
+      }
+
+      input[type='checkbox'] {
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        & + label {
+          cursor: pointer;
+          position: relative;
+          padding-left: 35px;
+          // display: flex;
+          // align-items: center;
+  
+          span {
+            margin: 2px 5px 0 0;
+            display: inline-block;
+          }
+
+          &::before {
+            content: '';
+            border: 2px solid #41d492;
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+            margin-right: 15px;
+            border-radius: 4px;
+            position: absolute;
+            top: 0; left:0;
+
+          }
+        }
+
+        &:checked {
+          & + label {
+            & > span{
+              text-decoration: line-through;
+            }
+
+            &::before {
+              background: #41d492;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 9px;
+              top: 4px;
+              width: 7px;
+              height: 12px;
+              border: solid white;
+              border-width: 0 3px 3px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+  }  
+}
